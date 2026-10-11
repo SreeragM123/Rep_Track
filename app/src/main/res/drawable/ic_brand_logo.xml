@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Outer Progress Ring Background Track -->
+    <path
+        android:strokeColor="#29313A"
+        android:strokeWidth="10"
+        android:strokeLineCap="round"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M 54, 26 A 28,28 0 1,1 26, 54" />
+
+    <!-- Outer Progress Ring Neon Lime Arc -->
+    <path
+        android:strokeColor="#C6FF63"
+        android:strokeWidth="10"
+        android:strokeLineCap="round"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M 54, 26 A 28,28 0 1,1 26, 54"
+        android:trimPathStart="0.0"
+        android:trimPathEnd="0.75" />
+
+    <!-- Dumbbell Bar -->
+    <path
+        android:fillColor="#F1F4EF"
+        android:pathData="M 43,52 L 65,52 C 65.8,52 66.5,52.7 66.5,53.5 C 66.5,54.3 65.8,55 65,55 L 43,55 C 42.2,55 41.5,54.3 41.5,53.5 C 41.5,52.7 42.2,52 43,52 Z" />
+
+    <!-- Dumbbell Left Weight -->
+    <path
+        android:fillColor="#C6FF63"
+        android:pathData="M 43,46 L 46,46 C 46.8,46 47.5,46.7 47.5,47.5 L 47.5,59.5 C 47.5,60.3 46.8,61 46,61 L 43,61 C 42.2,61 41.5,60.3 41.5,59.5 L 41.5,47.5 C 41.5,46.7 42.2,46 43,46 Z" />
+    <path
+        android:fillColor="#C6FF63"
+        android:pathData="M 38,48 L 40,48 C 40.8,48 41.5,48.7 41.5,49.5 L 41.5,57.5 C 41.5,58.3 40.8,59 40,59 L 38,59 C 37.2,59 36.5,58.3 36.5,57.5 L 36.5,49.5 C 36.5,48.7 37.2,48 38,48 Z" />
+
+    <!-- Dumbbell Right Weight -->
+    <path
+        android:fillColor="#C6FF63"
+        android:pathData="M 62,46 L 65,46 C 65.8,46 66.5,46.7 66.5,47.5 L 66.5,59.5 C 66.5,60.3 65.8,61 65,61 L 62,61 C 61.2,61 60.5,60.3 60.5,59.5 L 60.5,47.5 C 60.5,46.7 61.2,46 62,46 Z" />
+    <path
+        android:fillColor="#C6FF63"
+        android:pathData="M 68,48 L 70,48 C 70.8,48 71.5,48.7 71.5,49.5 L 71.5,57.5 C 71.5,58.3 70.8,59 70,59 L 68,59 C 67.2,59 66.5,58.3 66.5,57.5 L 66.5,49.5 C 66.5,48.7 67.2,48 68,48 Z" />
+
+</vector>

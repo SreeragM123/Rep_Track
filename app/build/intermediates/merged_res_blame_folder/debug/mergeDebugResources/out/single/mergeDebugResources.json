@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\9.6.0\\com.reptrack.app-debug-32:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\9.6.0\\com.reptrack.app-main-34:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\9.6.0\\com.reptrack.app-debug-32:\\layout_notification_steps.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\9.6.0\\com.reptrack.app-main-34:\\layout\\notification_steps.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\9.6.0\\com.reptrack.app-debug-32:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\9.6.0\\com.reptrack.app-main-34:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\9.6.0\\com.reptrack.app-debug-32:\\drawable_ic_steps.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\9.6.0\\com.reptrack.app-main-34:\\drawable\\ic_steps.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\9.6.0\\com.reptrack.app-debug-32:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\9.6.0\\com.reptrack.app-main-34:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\9.6.0\\com.reptrack.app-debug-32:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\9.6.0\\com.reptrack.app-main-34:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "com.reptrack.app-debug-32:/drawable_ic_brand_logo.xml.flat",
+        "source": "com.reptrack.app-main-34:/drawable/ic_brand_logo.xml"
+    }
+]
