@@ -127,6 +127,7 @@ public class MainActivity extends Activity {
                 }
             }
         }
+        showPage();
     }
 
     private void checkStepGoalCelebration() {
@@ -371,6 +372,7 @@ public class MainActivity extends Activity {
             }
             Toast.makeText(this, "Workout status updated", Toast.LENGTH_SHORT).show();
             if (onUpdated != null) onUpdated.run();
+            showPage();
         });
 
         dayBuilder.setNegativeButton("Close", (d, w) -> d.dismiss());
@@ -834,6 +836,25 @@ public class MainActivity extends Activity {
         }
         return Math.max(1, count);
     }
+    private int countWorkoutsThisWeek() {
+        Calendar c = Calendar.getInstance();
+        int dayOfWeek = c.get(Calendar.DAY_OF_WEEK); // Sun=1, Mon=2 ... Sat=7
+        int diffToSun = -(dayOfWeek - Calendar.SUNDAY);
+        c.add(Calendar.DATE, diffToSun);
+
+        SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+        int count = 0;
+        for (int i = 0; i < 7; i++) {
+            Calendar dayCal = (Calendar) c.clone();
+            dayCal.add(Calendar.DATE, i);
+            String dateStr = sdfDate.format(dayCal.getTime());
+            boolean isDone = prefs.getBoolean("workout_done_" + dateStr, false) || dateStr.equals(prefs.getString("last_workout_day", ""));
+            if (isDone) {
+                count++;
+            }
+        }
+        return count;
+    }
     private void build(){
         root=new LinearLayout(this);root.setOrientation(LinearLayout.VERTICAL);root.setBackgroundColor(BG);root.setPadding(dp(18),dp(16),dp(18),dp(10));
         ViewCompat.setOnApplyWindowInsetsListener(root, (v, insets) -> {
@@ -884,7 +905,7 @@ public class MainActivity extends Activity {
         // 2. This Week's Workouts Card (Calendar)
         cardStart();
         content.addView(text("THIS WEEK'S WORKOUTS",11,MUTED,true));
-        content.addView(text(workouts()+" / " + getTotalScheduledWorkouts() + " sessions completed",25,TEXT,true));
+        content.addView(text(countWorkoutsThisWeek()+" / " + getTotalScheduledWorkouts() + " sessions completed",25,TEXT,true));
         content.addView(space(8));
 
         // Weekly Calendar Row (Sun - Sat)
