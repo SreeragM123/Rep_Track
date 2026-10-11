@@ -308,11 +308,27 @@ public class MainActivity extends Activity {
                     while (keys.hasNext()) {
                         String key = keys.next();
                         Object val = json.get(key);
-                        if (val instanceof Boolean) editor.putBoolean(key, (Boolean) val);
-                        else if (val instanceof Integer) editor.putInt(key, (Integer) val);
-                        else if (val instanceof Long) editor.putLong(key, (Long) val);
-                        else if (val instanceof Float) editor.putFloat(key, (Float) val);
-                        else if (val instanceof String) editor.putString(key, (String) val);
+                        if (val instanceof Boolean) {
+                            editor.putBoolean(key, (Boolean) val);
+                        } else if (val instanceof Integer) {
+                            if (key.startsWith("steps_") || key.equals("steps_today") || key.equals("sensor_last")) {
+                                editor.putLong(key, ((Integer) val).longValue());
+                            } else {
+                                editor.putInt(key, (Integer) val);
+                            }
+                        } else if (val instanceof Long) {
+                            editor.putLong(key, (Long) val);
+                        } else if (val instanceof Float) {
+                            editor.putFloat(key, (Float) val);
+                        } else if (val instanceof Double) {
+                            if (key.startsWith("steps_") || key.equals("steps_today") || key.equals("sensor_last")) {
+                                editor.putLong(key, ((Double) val).longValue());
+                            } else {
+                                editor.putInt(key, ((Double) val).intValue());
+                            }
+                        } else if (val instanceof String) {
+                            editor.putString(key, (String) val);
+                        }
                     }
                     editor.apply();
                     Toast.makeText(this, "Data restored successfully! 🎉", Toast.LENGTH_LONG).show();
